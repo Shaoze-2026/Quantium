@@ -30,4 +30,8 @@ str(transactionData)
 str(customerData)
 ```
 I noticed that the DATE column was not displayed in the correct data type.
-![Type of data
+![Type of data](Type_of_DATE.png)
+So next step is to revise it. 
+```
+transactionData$DATE <- as.Date(transactionData$DATE, origin = "1899-12-30")
+```
