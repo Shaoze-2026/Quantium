@@ -6,4 +6,4 @@ The insights from your analysis will feed into the supermarket’s strategic pla
 ## Tool Used
 R:Data Cleaning, Analysis, and Visualization
 ## Data File
-You can find the original file here:
+You can find the original file here:[QVIDATA](QVI_data.xlsx)
