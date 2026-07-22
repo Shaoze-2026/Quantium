@@ -7,3 +7,20 @@ The insights from your analysis will feed into the supermarket’s strategic pla
 R:Data Cleaning, Analysis, and Visualization
 ## Data File
 You can find the original file here:[QVIDATA](QVI_data.xlsx)
+## Data Processing
+### 1、Library Packages
+To extend a programming language's capabilities we need to library packages first.
+```
+library(tidyverse)
+library(data.table)
+library(ggplot2)
+library(readr)
+library(dplyr)
+```
+### 2、Data Cleaning
+Import a file.
+```
+filePath <- "F:/QVI/"
+transactionData <- fread(paste0(filePath,"QVI_transaction_data.csv"))
+customerData <- fread(paste0(filePath,"QVI_purchase_behaviour.csv"))
+```
