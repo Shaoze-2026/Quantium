@@ -6,7 +6,7 @@ The insights from your analysis will feed into the supermarket’s strategic pla
 ## Tool Used
 R:Data Cleaning, Analysis, and Visualization
 ## Data File
-You can find the original file here:[QVIDATA](QVI_data.xlsx)
+You can find the original file here:[QVI_purchase_behaviour](QVI_purchase_behaviour.csv),  [QVI_transaction_data](QVI_transaction_data.csv)
 ## Data Processing
 ### 1、Library Packages
 To extend a programming language's capabilities we need to library packages first.
@@ -24,3 +24,10 @@ filePath <- "F:/QVI/"
 transactionData <- fread(paste0(filePath,"QVI_transaction_data.csv"))
 customerData <- fread(paste0(filePath,"QVI_purchase_behaviour.csv"))
 ```
+To learn about types of different columns
+```
+str(transactionData)
+str(customerData)
+```
+I noticed that the DATE column was not displayed in the correct data type.
+![Type of data
