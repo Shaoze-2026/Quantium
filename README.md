@@ -82,3 +82,11 @@ labs(x = "Day", y = "Number of transactions", title = "Transactions over time") 
 scale_x_date(breaks = "1 month") +
 theme(axis.text.x = element_text(angle = 90, vjust = 0.5))
 ```
+![Transaction over time](transaction_over_time.png)
+Zoom in.
+```
+ggplot(complete_data, aes(x = DATE, y = n)) +
+geom_line() +
+coord_cartesian(xlim = as.Date(c("2018-12-01", "2018-12-31"))) +
+scale_x_date(date_labels = "%Y-%m-%d")
+```
