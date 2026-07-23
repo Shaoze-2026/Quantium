@@ -106,6 +106,7 @@ geom_bar() +
 labs(x = "Pack Size(g)", y = "Number of transactions", title = "Number of transactions by pack size") +
 theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 ```
+![Number_of_transactions_by_pack_size](Number_of_transactions_by_pack_size.png)
 Pack sizes created look reasonable and now to create brands. Using the ffrst word in PROD_NAME to
 work out the brand name.
 ```
@@ -135,6 +136,7 @@ ylab = "frequency",
 col = "skyblue",
 las = 2)
 ```
+
 Let’s see if the higher sales are due to there being more customers who buy chips.
 ```
 data <- merge(transactionData,customerData, all.x = TRUE)
