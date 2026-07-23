@@ -193,6 +193,9 @@ labs(title = "Average price of per unit by LIFESTAGE and PREMIUM_CUSTOMER",
 y = "Average price per unit",
 x = "Lifestage") +
 theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+![Average price of per unit by LIFESTAGE and PREMIUM_CUSTOMER](Average_price_of_per_unit_by_LIFESTAGE_and_PREMIUM_CUSTOMER.png)
+```
 groupA <- subset(avg_price, (PREMIUM_CUSTOMER == "Mainstream" & LIFESTAGE == "MIDAGE SINGLES/COUPLES") | (PREMIUM_CUSTOMER == "Mainstream" & LIFESTAGE == "YOUNG SINGLES/COUPLES"))
 groupB <- subset(avg_price, (PREMIUM_CUSTOMER == "Budget" & LIFESTAGE == "MIDAGE SINGLES/COUPLES") | (PREMIUM_CUSTOMER == "Budget" & LIFESTAGE == "YOUNG SINGLES/COUPLES"))
 groupC <- subset(avg_price, (PREMIUM_CUSTOMER == "Premium" & LIFESTAGE == "MIDAGE SINGLES/COUPLES") | (PREMIUM_CUSTOMER == "Premium" & LIFESTAGE == "YOUNG SINGLES/COUPLES"))
