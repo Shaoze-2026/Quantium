@@ -168,6 +168,7 @@ fill = "Premium Customer") +
 theme_minimal() +
 theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
+![Number of customers by LIFESTAGE and PREMIUM_CUSTOMER](Number_of_customers_by_LIFESTAGE_and_PREMIUM_CUSTOMER.png)
 Let’s also investigate the average price per unit chips bought for each customer segment as this is also a
 driver of total sales.
 ```
