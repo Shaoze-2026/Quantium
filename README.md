@@ -30,7 +30,7 @@ str(transactionData)
 str(customerData)
 ```
 I noticed that the DATE column was not displayed in the correct data type.
-![Type of data](Type_of_DATE.png)
+![Type of data](picture/Type_of_DATE.png)
 So next step is to revise it. 
 ```
 transactionData$DATE <- as.Date(transactionData$DATE, origin = "1899-12-30")
@@ -82,7 +82,7 @@ labs(x = "Day", y = "Number of transactions", title = "Transactions over time") 
 scale_x_date(breaks = "1 month") +
 theme(axis.text.x = element_text(angle = 90, vjust = 0.5))
 ```
-![Transaction over time](transaction_over_time.png)
+![Transaction over time](picture/transaction_over_time.png)
 Zoom in.
 ```
 ggplot(complete_data, aes(x = DATE, y = n)) +
@@ -90,7 +90,7 @@ geom_line() +
 coord_cartesian(xlim = as.Date(c("2018-12-01", "2018-12-31"))) +
 scale_x_date(date_labels = "%Y-%m-%d")
 ```
-![zoom in](zoom_in.png)
+![zoom in](picture/zoom_in.png)
 I noticed the missing day is Christmas Day so the outlier just because day off.
 Now that there is satisffed that the data no longer has outliers.
 Moving on to create other features such as brand of chips or pack size from PROD_NAME. I will start with pack size.
@@ -106,7 +106,7 @@ geom_bar() +
 labs(x = "Pack Size(g)", y = "Number of transactions", title = "Number of transactions by pack size") +
 theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 ```
-![Number_of_transactions_by_pack_size](Number_of_transactions_by_pack_size.png)
+![Number_of_transactions_by_pack_size](picture/Number_of_transactions_by_pack_size.png)
 Pack sizes created look reasonable and now to create brands. Using the ffrst word in PROD_NAME to
 work out the brand name.
 ```
@@ -136,7 +136,7 @@ ylab = "frequency",
 col = "skyblue",
 las = 2)
 ```
-![Customer Data](Customer_Data.png)
+![Customer Data](picture/Customer_Data.png)
 Let’s see if the higher sales are due to there being more customers who buy chips.
 ```
 data <- merge(transactionData,customerData, all.x = TRUE)
@@ -154,7 +154,7 @@ fill = "Customer Type") +
 theme_minimal() +
 theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
-![Total Chip Sales by Lifestage and Premium Customer Segment](Total_Chip_Sales_by_Lifestage_and_Premium_Customer_Segment.png)
+![Total Chip Sales by Lifestage and Premium Customer Segment](picture/Total_Chip_Sales_by_Lifestage_and_Premium_Customer_Segment.png)
 ```
 customer_summary <- data %>%
 group_by(LIFESTAGE,PREMIUM_CUSTOMER) %>%
@@ -168,7 +168,7 @@ fill = "Premium Customer") +
 theme_minimal() +
 theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
-![Number of customers by LIFESTAGE and PREMIUM_CUSTOMER](Number_of_customers_by_LIFESTAGE_and_PREMIUM_CUSTOMER.png)
+![Number of customers by LIFESTAGE and PREMIUM_CUSTOMER](picture/Number_of_customers_by_LIFESTAGE_and_PREMIUM_CUSTOMER.png)
 Let’s also investigate the average price per unit chips bought for each customer segment as this is also a
 driver of total sales.
 ```
@@ -182,7 +182,7 @@ y = "Average units per customer",
 14x = "Lifestage") +
 theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
-![Average number of units of per customer by LIFESTAGE and PREMIUM_CUSTOMER](Average_number_of_units_of_per_customer_by_LIFESTAGE_and_PREMIUM_CUSTOMER.png)
+![Average number of units of per customer by LIFESTAGE and PREMIUM_CUSTOMER](picture/Average_number_of_units_of_per_customer_by_LIFESTAGE_and_PREMIUM_CUSTOMER.png)
 ```
 avg_price <- data %>%
 group_by(LIFESTAGE, PREMIUM_CUSTOMER) %>%
@@ -194,7 +194,7 @@ y = "Average price per unit",
 x = "Lifestage") +
 theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
-![Average price of per unit by LIFESTAGE and PREMIUM_CUSTOMER](Average_price_of_per_unit_by_LIFESTAGE_and_PREMIUM_CUSTOMER.png)
+![Average price of per unit by LIFESTAGE and PREMIUM_CUSTOMER](picture/Average_price_of_per_unit_by_LIFESTAGE_and_PREMIUM_CUSTOMER.png)
 ```
 groupA <- subset(avg_price, (PREMIUM_CUSTOMER == "Mainstream" & LIFESTAGE == "MIDAGE SINGLES/COUPLES") | (PREMIUM_CUSTOMER == "Mainstream" & LIFESTAGE == "YOUNG SINGLES/COUPLES"))
 groupB <- subset(avg_price, (PREMIUM_CUSTOMER == "Budget" & LIFESTAGE == "MIDAGE SINGLES/COUPLES") | (PREMIUM_CUSTOMER == "Budget" & LIFESTAGE == "YOUNG SINGLES/COUPLES"))
