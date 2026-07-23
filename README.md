@@ -204,8 +204,8 @@ t.test(groupA$avg_price_per_unit, groupC$avg_price_per_unit)
 ```
 ### 3、Conclusion
 Let’s recap what we’ve found!
-Sales have mainly been due to Budget - older families, Mainstream - young singles/couples, and Mainstream
-- retirees shoppers. We found that the high spend in chips for mainstream young singles/couples and retirees
+Sales have mainly been due to Budget - older families, Mainstream - young singles/couples, and Mainstream-retirees shoppers. 
+We found that the high spend in chips for mainstream young singles/couples and retirees
  is due to there being more of them than other buyers. Mainstream, midage and young singles and
 couples are also more likely to pay more per packet of chips. 
 We’ve also found that Mainstream young singles and couples are 23% more likely to purchase Tyrrells chips
