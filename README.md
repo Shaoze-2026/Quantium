@@ -181,6 +181,9 @@ labs(title = "Average number of units of per customer by LIFESTAGE and PREMIUM_C
 y = "Average units per customer",
 14x = "Lifestage") +
 theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+![Average number of units of per customer by LIFESTAGE and PREMIUM_CUSTOMER](Average_number_of_units_of_per_customer_by_LIFESTAGE_and_PREMIUM_CUSTOMER.png)
+```
 avg_price <- data %>%
 group_by(LIFESTAGE, PREMIUM_CUSTOMER) %>%
 summarise(avg_price_per_unit = mean(TOT_SALES), .group = "drop")
