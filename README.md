@@ -1,14 +1,14 @@
-# Chips Sales Data Analysis
-## Backround
+# 🖥️Chips Sales Data Analysis
+## 📰Backround
 You are part of Quantium’s retail analytics team and have been approached by your client, the Category Manager for chips, who wants to better understand the types of customers who purchase chips and their purchasing behaviour within the region.
 
 The insights from your analysis will feed into the supermarket’s strategic plan for the chip category in the next half year.
-## Tool Used
+## 📏Tool Used
 R:Data Cleaning, Analysis, and Visualization
-## Data File
+## 📁Data File
 You can find the original file here:[QVI_purchase_behaviour](QVI_purchase_behaviour.csv),  [QVI_transaction_data](QVI_transaction_data.csv)
-## Data Processing
-### 1、Library Packages
+## 💾Data Processing
+### 1️⃣Library Packages
 To extend a programming language's capabilities we need to library packages first.
 ```
 library(tidyverse)
@@ -17,7 +17,7 @@ library(ggplot2)
 library(readr)
 library(dplyr)
 ```
-### 2、Data Cleaning
+### 2️⃣Data Cleaning
 Import a file.
 ```
 filePath <- "F:/QVI/"
@@ -202,7 +202,7 @@ groupC <- subset(avg_price, (PREMIUM_CUSTOMER == "Premium" & LIFESTAGE == "MIDAG
 t.test(groupA$avg_price_per_unit, groupB$avg_price_per_unit)
 t.test(groupA$avg_price_per_unit, groupC$avg_price_per_unit)
 ```
-### 3、Conclusion
+### 3️⃣Conclusion
 Let’s recap what we’ve found!
 Sales have mainly been due to:
 Budget - older families
