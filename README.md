@@ -153,6 +153,9 @@ y = "Total Sales($)",
 fill = "Customer Type") +
 theme_minimal() +
 theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+![Total Chip Sales by Lifestage and Premium Customer Segment](Total_Chip_Sales_by_Lifestage_and_Premium_Customer_Segment.png)
+```
 customer_summary <- data %>%
 group_by(LIFESTAGE,PREMIUM_CUSTOMER) %>%
 summarise(customer_count = n_distinct(LYLTY_CARD_NBR), .group = "drop")
