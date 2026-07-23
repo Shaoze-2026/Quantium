@@ -136,7 +136,7 @@ ylab = "frequency",
 col = "skyblue",
 las = 2)
 ```
-![Customer Data](Customer Data.png)
+![Customer Data](Customer_Data.png)
 Let’s see if the higher sales are due to there being more customers who buy chips.
 ```
 data <- merge(transactionData,customerData, all.x = TRUE)
